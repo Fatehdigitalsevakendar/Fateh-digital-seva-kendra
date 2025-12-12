@@ -1,283 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services - Fateh Digital Seva Kendra</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Minimal inline tweaks so page still shows if CSS misses -->
-  <style>
-    /* small fallback styles so content shows even if your external CSS has issue */
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:#f6fbff; margin:0; color:#0d1b2a;}
-    .header{display:flex;align-items:center;gap:12px;padding:14px;background:white;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-    .header .header-logo img{width:64px;height:64px;object-fit:contain;border-radius:12px;background:white;padding:6px}
-    .site-title{font-weight:700;color:#0f4aa3;font-size:18px}
-    .header-sub{color:#6b7280;font-size:13px}
-    .container{padding:18px;max-width:900px;margin:0 auto}
-    .nav-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:18px}
-    .nav-circle{display:block;background:linear-gradient(180deg,#0b72d6,#0a5aa8);color:#fff;padding:18px;border-radius:28px;text-align:center;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(11,114,214,0.12)}
-    .hero-card{background:white;border-radius:14px;padding:20px;box-shadow:0 8px 22px rgba(8,35,63,.06);margin-bottom:18px}
-    .hero-cta{display:inline-block;padding:10px 14px;border-radius:10px;background:#0b72d6;color:#fff;margin-right:8px;text-decoration:none}
-    h2{font-size:20px;margin:6px 0 6px}
-    p.small{color:#6b7280;margin:0 0 12px}
-    .services-grid{display:grid;gap:10px}
-    .service-card{background:white;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(3,27,65,0.06);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-    .service-title{font-weight:700}
-    .service-desc{color:#6b7280;font-size:13px}
-    .price-badge{background:#eaf4ff;color:#03396b;padding:6px 10px;border-radius:10px;font-weight:700}
-    .footer-note{color:#6b7280;margin-top:10px;font-size:13px}
-    .floating-whatsapp{position:fixed;right:18px;bottom:18px;background:linear-gradient(180deg,#00c853,#00a046);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,.12)}
-    .floating-whatsapp a{color:#fff;font-size:22px;text-decoration:none}
-    @media(min-width:700px){.nav-grid{grid-template-columns:repeat(4,1fr)}}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services – Fateh Digital Seva Kendra</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+/* --- Same Background + Colors as Home Page --- */
+body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background:#f0f7ff;
+    margin:0;
+    color:#0d162a;
+}
+
+/* Header */
+.header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px;
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+}
+
+.header-logo img{
+    width:64px;
+    height:64px;
+    object-fit:contain;
+    border-radius:12px;
+    background:white;
+    padding:6px;
+}
+
+.site-title{
+    font-weight:700;
+    color:#0f40aa;
+    font-size:18px;
+}
+.header-sub{
+    color:#6b7280;
+    font-size:13px;
+}
+
+/* Navigation buttons same as homepage */
+.nav-circle{
+    display:block;
+    background:linear-gradient(180deg,#0072d6,#0a53aa);
+    padding:18px;
+    border-radius:28px;
+    color:white;
+    text-decoration:none;
+    margin-bottom:14px;
+    text-align:center;
+    font-weight:700;
+    font-size:18px;
+}
+
+.nav-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin:20px;
+}
+
+/* Page heading box */
+.hero-card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    margin:20px;
+    text-align:left;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+.hero-card h2{
+    margin:0;
+    font-size:22px;
+    color:#0d2348;
+}
+
+/* Service cards */
+.services-grid{
+    display:grid;
+    gap:18px;
+    margin:20px;
+}
+
+.service-card{
+    background:white;
+    padding:16px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    cursor:pointer;
+}
+
+.service-title{
+    font-weight:700;
+    font-size:17px;
+}
+.service-desc{
+    font-size:13px;
+    color:#6b7280;
+}
+.price-badge{
+    display:inline-block;
+    background:#eaffff;
+    color:#005b96;
+    padding:6px 10px;
+    border-radius:10px;
+    font-weight:700;
+}
+</style>
 </head>
+
 <body>
 
-  
-    <header class="header">
-  <div class="header-logo">
-    <img src="fateh-logo.png" alt="Fateh Digital Seva Kendra Logo" class="site-logo">
-  </div>
+<!-- HEADER START -->
+<header class="header">
+    <div class="header-logo">
+        <img src="fateh-logo.png" alt="Fateh Digital Seva Kendra Logo" class="site-logo">
+    </div>
 
-  <div>
-    <div class="site-title">Fateh Digital Seva Kendra</div>
-    <div class="header-sub">Official Services · Ghal Kalan, Moga</div>
-  </div>
+    <div>
+        <div class="site-title">Fateh Digital Seva Kendra</div>
+        <div class="header-sub">Official Services · Ghal Kalan, Moga</div>
+    </div>
 
-  <div style="margin-left:auto;display:flex;gap:6px;align-items:center">
-    <a href="index.html" style="text-decoration:none;color:#0b72d6;font-weight:700">EN</a>
-  </div>
+    <div style="margin-left:auto;">
+        <a href="index.html" style="text-decoration:none;color:#0072d6;font-weight:700">EN</a>
+    </div>
 </header>
+<!-- HEADER END -->
 
-<section class="hero">
-  <div class="intro">
-    <div class="left">
-      <h1>Our Services & Prices</h1>
-      <p class="small">Tap any service card to message on WhatsApp and order.</p>
-
-      <div class="cta">
-        <a class="btn" href="services.html">See Services</a>
-        <a class="btn" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-
-    <div class="small-card" style="width:220px;text-align:center">
-      <img src="css/images/csc-logo.png" alt="CSC" style="width:100px;height:auto">
-      <div class="small" style="margin-top:10px">Government Services Partner</div>
-    </div>
-  </div>
+<!-- TOP SECTION -->
+<section class="hero-card">
+    <h2>Our Services & Prices</h2>
+    <p>Tap any service to message on WhatsApp and order.</p>
 </section>
 
-    <nav class="nav-grid" aria-label="Main navigation">
-      <a class="nav-circle" href="index.html">🏠 Home</a>
-      <a class="nav-circle" href="services.html">📃 Services</a>
-      <a class="nav-circle" href="contact.html">📞 Contact</a>
-      <a class="nav-circle" href="about.html">ℹ️ About</a>
-      <a class="nav-circle" href="#" id="langBtn">🌐 Language</a>
-    </nav>
+<!-- NAVIGATION BUTTONS -->
+<div class="nav-grid">
+    <a class="nav-circle" href="index.html">🏠 Home</a>
+    <a class="nav-circle" href="services.html">🧾 Services</a>
+    <a class="nav-circle" href="contact.html">📞 Contact</a>
+    <a class="nav-circle" href="about.html">ℹ️ About</a>
+    <a class="nav-circle" href="#">🌐 Language</a>
+</div>
 
-    <section class="hero-card" role="region" aria-label="Hero">
-      <h2>Our Services & Prices</h2>
-      <p class="small">Tap any service card to message on WhatsApp and order.</p>
-      <a class="hero-cta" href="services.html">See Services</a>
-      <a class="hero-cta" href="contact.html" style="background:#fff;color:#0b72d6;border:1px solid #dbeafe">Contact Us</a>
-    </section>
+<!-- SERVICE LIST -->
+<div class="services-grid" id="serviceGrid">
 
-    <h2 style="margin-top:0">Featured Services</h2>
-    <p class="small">Tap a service to open WhatsApp and start ordering</p>
-
-    <div id="serviceGrid" class="services-grid">
-
-      <!-- core services -->
-      <div class="service-card" data-key="pan">
-        <div>
-          <div class="service-title">PAN Card</div>
-          <div class="service-desc">Apply & corrections</div>
-        </div>
+    <div class="service-card" data-key="pan">
+        <div class="service-title">PAN Card</div>
+        <div class="service-desc">Apply & corrections</div>
         <div class="service-price"><span class="price-badge">₹250</span></div>
-      </div>
-
-      <div class="service-card" data-key="aadhaar">
-        <div>
-          <div class="service-title">Aadhaar Print + Lamination</div>
-          <div class="service-desc">Printing & updates</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹80</span></div>
-      </div>
-
-      <div class="service-card" data-key="epfo">
-        <div>
-          <div class="service-title">EPFO Fund</div>
-          <div class="service-desc">Claims & withdrawal</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹150</span></div>
-      </div>
-
-      <div class="service-card" data-key="itr">
-        <div>
-          <div class="service-title">Income Tax Return (ITR)</div>
-          <div class="service-desc">Return filing</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹600</span></div>
-      </div>
-
-      <div class="service-card" data-key="caste">
-        <div>
-          <div class="service-title">Caste Certificate</div>
-          <div class="service-desc">Apply & track</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹300</span></div>
-      </div>
-
-      <div class="service-card" data-key="residence">
-        <div>
-          <div class="service-title">Residence Certificate</div>
-          <div class="service-desc">Verification help</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹250</span></div>
-      </div>
-
-      <div class="service-card" data-key="income">
-        <div>
-          <div class="service-title">Income Certificate</div>
-          <div class="service-desc">Apply & support</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹250</span></div>
-      </div>
-
-      <div class="service-card" data-key="photocopy">
-        <div>
-          <div class="service-title">Photocopy B/W</div>
-          <div class="service-desc">High quality copies</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹4 / sheet</span></div>
-      </div>
-
-      <div class="service-card" data-key="colour">
-        <div>
-          <div class="service-title">Colour Photocopy</div>
-          <div class="service-desc">Bright colour prints</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹10 / page</span></div>
-      </div>
-
-      <div class="service-card" data-key="resume">
-        <div>
-          <div class="service-title">Resume / CV Making</div>
-          <div class="service-desc">Professional resume</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹50</span></div>
-      </div>
-
-      <!-- additional services you requested -->
-      <div class="service-card" data-key="rular">
-        <div>
-          <div class="service-title">Rular Certificate</div>
-          <div class="service-desc">Apply</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹300</span></div>
-      </div>
-
-      <div class="service-card" data-key="oldage">
-        <div>
-          <div class="service-title">Old Age Pension / Widow File</div>
-          <div class="service-desc">Apply & process</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹400</span></div>
-      </div>
-
-      <div class="service-card" data-key="deathbirth">
-        <div>
-          <div class="service-title">Death/Birth Certificate</div>
-          <div class="service-desc">Apply</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹300</span></div>
-      </div>
-
-      <div class="service-card" data-key="deathbirthlate">
-        <div>
-          <div class="service-title">Death/Birth Certificate (Late Entry)</div>
-          <div class="service-desc">Apply (late entry)</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹500</span></div>
-      </div>
-
-      <div class="service-card" data-key="udhyam">
-        <div>
-          <div class="service-title">Udhyam Certificate</div>
-          <div class="service-desc">Apply</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹200</span></div>
-      </div>
-
-      <div class="service-card" data-key="5lakhbina">
-        <div>
-          <div class="service-title">5 Lakh Bima Card</div>
-          <div class="service-desc">Health insurance</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹100</span></div>
-      </div>
-
-      <div class="service-card" data-key="pmkisankyc">
-        <div>
-          <div class="service-title">PM Kisan - KYC</div>
-          <div class="service-desc">Verification</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹100</span></div>
-      </div>
-
-      <div class="service-card" data-key="pmkisannew">
-        <div>
-          <div class="service-title">PM Kisan - New File</div>
-          <div class="service-desc">Apply & claims</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹300</span></div>
-      </div>
-
-      <div class="service-card" data-key="voter">
-        <div>
-          <div class="service-title">Voter Card</div>
-          <div class="service-desc">Apply / corrections</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹200</span></div>
-      </div>
-
-      <div class="service-card" data-key="eshram">
-        <div>
-          <div class="service-title">Eshram Card</div>
-          <div class="service-desc">Apply</div>
-        </div>
-        <div class="service-price"><span class="price-badge">₹150</span></div>
-      </div>
-
     </div>
 
-    <div class="footer-note">Click a service card to message on WhatsApp and order.</div>
+    <div class="service-card" data-key="aadhaar">
+        <div class="service-title">Aadhaar Print + Lamination</div>
+        <div class="service-desc">Printing & updates</div>
+        <div class="service-price"><span class="price-badge">₹80</span></div>
+    </div>
 
-  </main>
+    <div class="service-card" data-key="epfo">
+        <div class="service-title">EPFO Fund</div>
+        <div class="service-desc">Claims & withdrawal</div>
+        <div class="service-price"><span class="price-badge">₹150</span></div>
+    </div>
 
-  <!-- floating WhatsApp -->
-  <div class="floating-whatsapp">
-    <a href="https://wa.me/919780010087" target="_blank" title="Message on WhatsApp">💬</a>
-  </div>
+    <div class="service-card" data-key="itr">
+        <div class="service-title">Income Tax Return (ITR)</div>
+        <div class="service-desc">Return filing</div>
+        <div class="service-price"><span class="price-badge">₹600</span></div>
+    </div>
 
-  <script>
-    // phone to use for messages (use with country code, no +)
-    const phone = "919780010087";
+    <div class="service-card" data-key="caste">
+        <div class="service-title">Caste Certificate</div>
+        <div class="service-desc">Apply & track</div>
+        <div class="service-price"><span class="price-badge">₹300</span></div>
+    </div>
 
-    // When a service card is clicked open WhatsApp with prefilled msg
-    document.getElementById('serviceGrid').addEventListener('click', (e)=>{
-      const card = e.target.closest('.service-card');
-      if(!card) return;
-      const titleEl = card.querySelector('.service-title');
-      const priceEl = card.querySelector('.price-badge');
-      const title = titleEl ? titleEl.textContent.trim() : 'Service';
-      const price = priceEl ? priceEl.textContent.trim() : '';
-      const msg = encodeURIComponent(`I want to apply for ${title} ${price}`);
-      const url = `https://wa.me/${phone}?text=${msg}`;
-      window.open(url, '_blank');
-    });
-  </script>
+    <div class="service-card" data-key="residence">
+        <div class="service-title">Residence Certificate</div>
+        <div class="service-desc">Verification help</div>
+        <div class="service-price"><span class="price-badge">₹250</span></div>
+    </div>
+
+    <div class="service-card" data-key="rular">
+        <div class="service-title">Rular Certificate</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹300</span></div>
+    </div>
+
+    <div class="service-card" data-key="oldage">
+        <div class="service-title">Old Age Pension / Widow File</div>
+        <div class="service-desc">Apply & process</div>
+        <div class="service-price"><span class="price-badge">₹400</span></div>
+    </div>
+
+    <div class="service-card" data-key="birth">
+        <div class="service-title">Birth / Death Certificate</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹300</span></div>
+    </div>
+
+    <div class="service-card" data-key="birthlate">
+        <div class="service-title">Birth / Death Certificate Late Entry</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹500</span></div>
+    </div>
+
+    <div class="service-card" data-key="udyam">
+        <div class="service-title">Udyam Certificate</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹200</span></div>
+    </div>
+
+    <div class="service-card" data-key="pmkisan">
+        <div class="service-title">PM Kisan – KYC</div>
+        <div class="service-desc">Verification</div>
+        <div class="service-price"><span class="price-badge">₹100</span></div>
+    </div>
+
+    <div class="service-card" data-key="pmkisannew">
+        <div class="service-title">PM Kisan – New File</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹300</span></div>
+    </div>
+
+    <div class="service-card" data-key="voter">
+        <div class="service-title">Voter Card</div>
+        <div class="service-desc">Apply / corrections</div>
+        <div class="service-price"><span class="price-badge">₹200</span></div>
+    </div>
+
+    <div class="service-card" data-key="esharm">
+        <div class="service-title">Esharm Card</div>
+        <div class="service-desc">Apply</div>
+        <div class="service-price"><span class="price-badge">₹150</span></div>
+    </div>
+
+</div>
+
+<!-- WhatsApp Click Script -->
+<script>
+document.getElementById("serviceGrid").addEventListener("click", e => {
+    const card = e.target.closest('.service-card');
+    if (!card) return;
+
+    const title = card.querySelector('.service-title').textContent;
+    const price = card.querySelector('.price-badge').textContent;
+
+    const msg = encodeURIComponent(`I want to apply for ${title} (${price})`);
+    window.location.href = `https://wa.me/919780010087?text=${msg}`;
+});
+</script>
 
 </body>
-              </html>
+</html>
