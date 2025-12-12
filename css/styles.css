@@ -110,4 +110,14 @@ body{
   .hero h1{font-size:20px}
   .header .site-title{font-size:16px}
   .grid-nav{grid-template-columns:1fr}
+  .site-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  
 }
