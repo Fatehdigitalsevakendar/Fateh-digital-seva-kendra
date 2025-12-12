@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services – Fateh Digital Seva Kendra</title>
+
+<!-- Your main stylesheet (DO NOT REMOVE) -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- SAFE fallback (does NOT override colours) -->
+<style>
+  body { margin:0; font-family:Inter, system-ui, sans-serif; }
+  .container { max-width:900px; margin:0 auto; padding:16px; }
+</style>
+</head>
+
+<body class="page-enter">
+
+<!-- HEADER (same as home) -->
+<header class="header">
+  <div class="header-logo">
+    <img src="fateh-logo.png" class="site-logo" alt="Fateh Digital Seva Kendra Logo">
+  </div>
+
+  <div>
+    <div class="site-title">Fateh Digital Seva Kendra</div>
+    <div class="header-sub">Ghal Kalan · Moga</div>
+  </div>
+
+  <div style="margin-left:auto;display:flex;align-items:center;">
+    <a href="index.html" style="color:#0b72d6;font-weight:700;text-decoration:none;">EN</a>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- NAVIGATION BUTTONS (EXACT SAME AS HOME) -->
+<nav class="nav-grid">
+  <a class="nav-circle" href="index.html">🏠 Home</a>
+  <a class="nav-circle" href="services.html">🧾 Services</a>
+  <a class="nav-circle" href="contact.html">📞 Contact</a>
+  <a class="nav-circle" href="about.html">ℹ️ About</a>
+  <a class="nav-circle" href="#" id="langBtn">🌐 Language</a>
+</nav>
+
+<!-- HERO CARD BELOW NAV (SAME AS HOME) -->
+<section class="hero-card">
+  <h2>Our Services & Prices</h2>
+  <p class="small">Tap any service to message on WhatsApp instantly.</p>
+</section>
+
+<h2>All Services</h2>
+<p class="small">Tap to open WhatsApp with prefilled message</p>
+
+<!-- SERVICES GRID -->
+<div id="serviceGrid" class="services-grid">
+
+  <div class="service-card" data-name="PAN Card" data-price="₹250">
+    <div class="service-title">PAN Card</div>
+    <div class="service-desc">Apply & Corrections</div>
+    <div class="price-badge">₹250</div>
+  </div>
+
+  <div class="service-card" data-name="Aadhaar Print + Lamination" data-price="₹80">
+    <div class="service-title">Aadhaar Print + Lamination</div>
+    <div class="service-desc">High quality print</div>
+    <div class="price-badge">₹80</div>
+  </div>
+
+  <div class="service-card" data-name="EPFO Fund" data-price="₹150">
+    <div class="service-title">EPFO Fund</div>
+    <div class="service-desc">Withdrawal support</div>
+    <div class="price-badge">₹150</div>
+  </div>
+
+  <div class="service-card" data-name="Caste Certificate" data-price="₹300">
+    <div class="service-title">Caste Certificate</div>
+    <div class="service-desc">Apply / Download</div>
+    <div class="price-badge">₹300</div>
+  </div>
+
+  <div class="service-card" data-name="Residence Certificate" data-price="₹250">
+    <div class="service-title">Residence Certificate</div>
+    <div class="service-desc">Apply / Verification</div>
+    <div class="price-badge">₹250</div>
+  </div>
+
+  <div class="service-card" data-name="Income Certificate" data-price="₹250">
+    <div class="service-title">Income Certificate</div>
+    <div class="service-desc">Apply / Support</div>
+    <div class="price-badge">₹250</div>
+  </div>
+
+  <div class="service-card" data-name="Rular Certificate" data-price="₹300">
+    <div class="service-title">Rular Certificate</div>
+    <div class="service-desc">Apply</div>
+    <div class="price-badge">₹300</div>
+  </div>
+
+  <div class="service-card" data-name="Old Age Pension / Widow File" data-price="₹400">
+    <div class="service-title">Old Age Pension / Widow File</div>
+    <div class="service-desc">New Application</div>
+    <div class="price-badge">₹400</div>
+  </div>
+
+  <div class="service-card" data-name="Birth/Death Certificate" data-price="₹300">
+    <div class="service-title">Birth/Death Certificate</div>
+    <div class="service-desc">Apply / Download</div>
+    <div class="price-badge">₹300</div>
+  </div>
+
+  <div class="service-card" data-name="Birth/Death Late Entry" data-price="₹500">
+    <div class="service-title">Birth/Death Late Entry</div>
+    <div class="service-desc">Apply / Support</div>
+    <div class="price-badge">₹500</div>
+  </div>
+
+  <div class="service-card" data-name="Udyam Certificate" data-price="₹200">
+    <div class="service-title">Udyam Certificate</div>
+    <div class="service-desc">Apply</div>
+    <div class="price-badge">₹200</div>
+  </div>
+
+  <div class="service-card" data-name="5 Lakh Bina Card" data-price="₹100">
+    <div class="service-title">5 Lakh Bina Card</div>
+    <div class="service-desc">Apply</div>
+    <div class="price-badge">₹100</div>
+  </div>
+
+  <div class="service-card" data-name="PM Kisan KYC" data-price="₹100">
+    <div class="service-title">PM Kisan KYC</div>
+    <div class="service-desc">Verification</div>
+    <div class="price-badge">₹100</div>
+  </div>
+
+  <div class="service-card" data-name="PM Kisan New File" data-price="₹300">
+    <div class="service-title">PM Kisan New File</div>
+    <div class="service-desc">New Farmer Registration</div>
+    <div class="price-badge">₹300</div>
+  </div>
+
+  <div class="service-card" data-name="Voter Card" data-price="₹200">
+    <div class="service-title">Voter Card</div>
+    <div class="service-desc">New / Correction</div>
+    <div class="price-badge">₹200</div>
+  </div>
+
+  <div class="service-card" data-name="Eshram Card" data-price="₹150">
+    <div class="service-title">Eshram Card</div>
+    <div class="service-desc">Apply</div>
+    <div class="price-badge">₹150</div>
+  </div>
+
+  <div class="service-card" data-name="Photocopy B/W" data-price="₹4 per sheet">
+    <div class="service-title">Photocopy B/W</div>
+    <div class="service-desc">High Quality</div>
+    <div class="price-badge">₹4/sheet</div>
+  </div>
+
+  <div class="service-card" data-name="Colour Photocopy" data-price="₹10 per page">
+    <div class="service-title">Colour Photocopy</div>
+    <div class="service-desc">Colour Printing</div>
+    <div class="price-badge">₹10/page</div>
+  </div>
+
+  <div class="service-card" data-name="Resume / CV Making" data-price="₹50">
+    <div class="service-title">Resume / CV Making</div>
+    <div class="service-desc">Professional resume</div>
+    <div class="price-badge">₹50</div>
+  </div>
+
+</div>
+
+</main>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/9780010087" class="floating-whatsapp">💬</a>
+
+<!-- CLICK SERVICE → OPEN WHATSAPP -->
+<script>
+document.getElementById("serviceGrid").addEventListener("click", function(e){
+  const card = e.target.closest(".service-card");
+  if (!card) return;
+
+  const name = card.dataset.name;
+  const price = card.dataset.price;
+
+  const msg = encodeURIComponent(`I want to apply for ${name} – ${price}`);
+  window.location.href = `https://wa.me/9780010087?text=${msg}`;
+});
+</script>
+
+</body>
+</html>
