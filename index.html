@@ -1,194 +1,142 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Fateh Digital Seva Kendra — Home</title>
   <link rel="stylesheet" href="css/styles.css">
   <meta name="description" content="Fateh Digital Seva Kendra — Ghal Kalan, Moga. PAN, Aadhaar, certificates & printing.">
 </head>
-<body id="body">
+<body class="page-enter" id="body">
 
-<header class="header">
-  <div class="header-brand">
-    <!-- logo file path: css/images/csc-logo.png -->
-    <img class="logo" src="css/images/csc-logo.png" alt="CSC Logo" />
-    <div>
-      <div class="site-title" id="siteTitle">Fateh Digital Seva Kendra</div>
-      <div class="header-sub" id="siteSub">Ghal Kalan, Moga — Government services partner</div>
-    </div>
-  </div>
-
-  <div class="right-controls">
-    <div class="lang-switch" role="navigation" aria-label="language switch">
-      <button class="lang" id="langEN" title="English">EN</button>
-      <button class="lang" id="langHI" title="Hindi">HI</button>
-      <button class="lang" id="langPA" title="Punjabi (ਪੰਜਾਬੀ)">ਪਾ</button>
-    </div>
-  </div>
-</header>
-
-<main class="container">
-
-  <nav class="nav-grid" aria-label="main navigation">
-    <a class="nav-item" href="index.html" id="navHome"><span>🏠</span><span class="nav-text" data-key="navHome">Home</span></a>
-    <a class="nav-item" href="services.html" id="navServices"><span>🧾</span><span class="nav-text" data-key="navServices">Services</span></a>
-    <a class="nav-item" href="contact.html" id="navContact"><span>📞</span><span class="nav-text" data-key="navContact">Contact</span></a>
-    <a class="nav-item" href="about.html" id="navAbout"><span>ℹ️</span><span class="nav-text" data-key="navAbout">About</span></a>
-    <a class="nav-item" id="navLang"><span>🌐</span><span class="nav-text" data-key="navLang">Language</span></a>
-  </nav>
-
-  <!-- Latest Bharti (stays on top) -->
-  <section class="notice" id="latestWrap">
-    <div class="notice-text" id="noticeTitle">🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts</div>
-    <a class="notice-cta" id="noticeCTA" href="#" target="_blank" rel="noopener">Apply</a>
-  </section>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1 id="heroTitle">Fateh Digital Seva Kendra</h1>
-    <p id="heroSub">Ghal Kalan, Moga — Government services partner</p>
-    <div class="hero-ctas">
-      <a class="btn" href="services.html" id="seeServices">See Services</a>
-      <a class="btn btn-outline" href="contact.html" id="contactUs">Contact Us</a>
-    </div>
-  </section>
-
-  <!-- Featured services (compact on home) -->
-  <section class="small-card">
-    <h3 id="featuredTitle">Featured Services</h3>
-    <div class="services-grid">
-      <div class="service-item"><strong>PAN Card</strong><div class="price">₹250</div></div>
-      <div class="service-item"><strong>Aadhaar Print + Lamination</strong><div class="price">₹80</div></div>
-      <div class="service-item"><strong>EPFO Fund</strong><div class="price">₹150</div></div>
-      <div class="service-item"><strong>Income Tax Return (ITR)</strong><div class="price">₹600</div></div>
+  <header class="header">
+    <div class="header-brand">
+      <div class="logo"><img src="css/images/csc-logo.png" alt="CSC Logo"></div>
+      <div>
+        <div class="site-title">Fateh Digital Seva Kendra</div>
+        <div class="header-sub">Official Services · Ghal Kalan, Moga</div>
+      </div>
     </div>
 
-    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-      <a class="btn" href="services.html">All Services</a>
-      <a class="btn btn-outline" href="contact.html">Contact</a>
+    <div style="margin-left:auto" id="langWrap">
+      <button class="lang-btn" id="langBtn">EN / हिंदी</button>
     </div>
-  </section>
+  </header>
 
-  <!-- Quick contact / socials / location -->
-  <footer class="footer">
-    <div class="footer-top">
+  <main class="container">
+    <!-- navigation circles (5 including language) -->
+    <div class="grid-nav" id="navGrid">
+      <a class="nav-circle" href="index.html"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a class="nav-circle" href="services.html"><span class="nav-icon">🧾</span><span>Services</span></a>
+      <a class="nav-circle" href="contact.html"><span class="nav-icon">📞</span><span>Contact</span></a>
+      <a class="nav-circle" href="about.html"><span class="nav-icon">ℹ️</span><span>About</span></a>
+      <a class="nav-circle" id="langJump" href="#"><span class="nav-icon">🌐</span><span>Language</span></a>
+    </div>
+
+    <!-- Latest Bharti (sticky) -->
+    <div class="notice-wrap">
+      <div class="notice" id="latestNotice">
+        <div>
+          <div class="title">🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts</div>
+          <div class="small">Click to apply — limited seats, contact now.</div>
+        </div>
+        <a class="cta" id="noticeCTA" href="#">Apply</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1 id="heroTitle">Fateh Digital Seva Kendra</h1>
+      <p id="heroSub">Ghal Kalan, Moga — Government services partner</p>
+      <div class="row" style="margin-top:8px">
+        <a class="nav-circle" href="services.html" style="flex:0 0 auto; border-radius:10px; padding:10px 14px">See Services</a>
+        <a class="nav-circle" href="contact.html" style="flex:0 0 auto; background:#fff;color:var(--deep-1);border:1px solid rgba(11,23,34,0.06)">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Featured services -->
+    <section class="small-card" style="margin-top:16px">
+      <h3 style="margin:0 0 8px 0">Featured Services</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-title">PAN Card</div>
+          <div class="service-desc">Apply & corrections</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-title">Aadhaar Print</div>
+          <div class="service-desc">Printing & minor updates</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-title">Resume / CV</div>
+          <div class="service-desc">Professional resume writing</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom bar: socials + location -->
+    <div class="bottom-bar">
       <div class="socials">
         <a href="https://www.instagram.com/mr_mrs_ghali?igsh=ZGFxNGt0aXdwaDU2" target="_blank" rel="noopener">📸 Follow on Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=100070660671297&mibextid=JRoKGi" target="_blank" rel="noopener">👍 Follow on Facebook</a>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="address" id="footerAddress">Address: Village Ghal Kalan, Punjab 142048, India</div>
-      <div>
-        <a id="mapsBtn" class="btn btn-small" href="#" target="_blank" rel="noopener">Open location</a>
+      <div class="location-row">
+        <div class="small">Address: Village Ghal Kalan, Punjab 142048, India</div>
+        <div>
+          <a class="btn-loc" id="mapsBtn" href="#" target="_blank">🗺️ Open Location</a>
+        </div>
       </div>
     </div>
 
-    <div class="copyright">© 2025 Fateh Digital Seva Kendra — Ghal Kalan, Moga</div>
-  </footer>
+    <div class="footer-note">© 2025 Fateh Digital Seva Kendra — Ghal Kalan, Moga</div>
+  </main>
 
-  <!-- Floating WhatsApp quick message -->
-  <a class="fab" id="whatsappFab" href="#" target="_blank" rel="noopener" title="Message on WhatsApp">💬</a>
-
-</main>
+  <a class="fab" id="whatsFab" href="#" target="_blank">💬 WhatsApp</a>
 
 <script>
-/* -------------- CONFIG -------------- */
-/* Use the WhatsApp number with country code (no +): 91 + local */
-const phone = '919780010087'; // +91 97800 10087
+/* Page ready animation */
+window.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('body').classList.add('page-ready');
+});
+
+/* WhatsApp for latest bharti: prefilled message */
+const phone = '919780010087'; // change if needed
+const bhartiText = encodeURIComponent('I want to apply - SSC GD Constable Recruitment 2026');
+const applyUrl = `https://wa.me/${phone}?text=${bhartiText}`;
+document.getElementById('noticeCTA').href = applyUrl;
+document.getElementById('whatsFab').href = `https://wa.me/${phone}?text=${encodeURIComponent('Hi, I have a query about services')}`;
+
+/* maps url for Ghal Kalan */
 const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Ghal+Kalan+Punjab+142048+India';
-
-/* -------------- TEXT / TRANSLATIONS -------------- */
-const L = {
-  en: {
-    navHome:'Home', navServices:'Services', navContact:'Contact', navAbout:'About', navLang:'Language',
-    notice:'🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts',
-    apply:'Apply',
-    heroTitle:'Fateh Digital Seva Kendra',
-    heroSub:'Ghal Kalan, Moga — Government services partner',
-    featured:'Featured Services',
-    address:'Address: Village Ghal Kalan, Punjab 142048, India',
-    mapsBtn:'Open location',
-    socialsInsta:'Follow on Instagram',
-    socialsFb:'Follow on Facebook',
-    seeServices:'See Services', contactUs:'Contact Us'
-  },
-  hi: {
-    navHome:'होम', navServices:'सेवाएँ', navContact:'संपर्क', navAbout:'बारे में', navLang:'भाषा',
-    notice:'🔔 एसएससी जीडी कांस्टेबल भर्ती 2026 — 25,487 पदों की सूचना जारी',
-    apply:'आवेदन करें',
-    heroTitle:'फतेह डिजिटल सेवा केंद्र',
-    heroSub:'घल कलाँ, मोगा — सरकारी सेवा भागीदार',
-    featured:'मुख्य सेवाएँ',
-    address:'पता: ग्राम घल कलाँ, पंजाब 142048, भारत',
-    mapsBtn:'स्थान खोलें',
-    socialsInsta:'इंस्टाग्राम पर फॉलो करें',
-    socialsFb:'फेसबुक पर फॉलो करें',
-    seeServices:'सेवाएँ देखें', contactUs:'संपर्क करें'
-  },
-  pa: {
-    navHome:'ਹੋਮ', navServices:'ਸੇਵਾਵਾਂ', navContact:'ਸੰਪਰਕ', navAbout:'ਬਾਰੇ', navLang:'ਭਾਸ਼ਾ',
-    notice:'🔔 ਐਸਐਸਸੀ ਜੀਡੀ ਕਾਂਸਟੇਬਲ ਭਰਤੀ 2026 — 25,487 ਪੋਸਟਾਂ ਦੀ ਸੂਚਨਾ ਜਾਰੀ',
-    apply:'Apply ਕਰੋ',
-    heroTitle:'ਫਤੇਹ ਡਿਜਿਟਲ ਸੇਵਾ ਕੇਂਦਰ',
-    heroSub:'ਘਲ ਕਲਾਂ, ਮੋਗਾ — ਸਰਕਾਰੀ ਸੇਵਾਵਾਂ ਭਾਗੀਦਾਰ',
-    featured:'ਮੁੱਖ ਸੇਵਾਵਾਂ',
-    address:'ਪਤਾ: ਪਿੰਡ ਘਲ ਕਲਾਂ, ਪੰਜਾਬ 142048, ਭਾਰਤ',
-    mapsBtn:'ਟਿਕਾਣਾ ਖੋਲ੍ਹੋ',
-    socialsInsta:'Instagram ਤੇ Follow ਕਰੋ',
-    socialsFb:'Facebook ਤੇ Follow ਕਰੋ',
-    seeServices:'ਸੇਵਾਵਾਂ ਵੇਖੋ', contactUs:'ਸੰਪਰਕ ਕਰੋ'
-  }
-};
-
-/* -------------- UTILITIES -------------- */
-function setLang(code){
-  const t = L[code] || L.en;
-  // nav texts
-  document.querySelectorAll('.nav-text').forEach(el=>{
-    const key = el.getAttribute('data-key');
-    if(key && t[key]) el.textContent = t[key];
-  });
-  // other items
-  document.getElementById('noticeTitle').textContent = t.notice;
-  document.getElementById('noticeCTA').textContent = t.apply;
-  document.getElementById('heroTitle').textContent = t.heroTitle;
-  document.getElementById('heroSub').textContent = t.heroSub;
-  document.getElementById('featuredTitle').textContent = t.featured;
-  document.getElementById('footerAddress').textContent = t.address;
-  document.getElementById('mapsBtn').textContent = t.mapsBtn;
-  document.getElementById('seeServices').textContent = t.seeServices;
-  document.getElementById('contactUs').textContent = t.contactUs;
-}
-
-/* appear-ready default -> English */
-setLang('en');
-
-/* Buttons */
-document.getElementById('langEN').addEventListener('click', ()=> setLang('en'));
-document.getElementById('langHI').addEventListener('click', ()=> setLang('hi'));
-document.getElementById('langPA').addEventListener('click', ()=> setLang('pa'));
-
-/* Build WhatsApp URLs */
-function waUrl(msg){ return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`; }
-
-/* Default WhatsApp targets */
-document.getElementById('noticeCTA').href = waUrl('I want to apply - SSC GD Constable Recruitment 2026');
-document.getElementById('whatsappFab').href = waUrl('Hello, I want info about your services');
 document.getElementById('mapsBtn').href = mapsUrl;
 
-/* Optional: change notice CTA message per language when language button clicked */
-document.getElementById('langEN').addEventListener('click', ()=> {
-  document.getElementById('noticeCTA').href = waUrl('I want to apply - SSC GD Constable Recruitment 2026');
-});
-document.getElementById('langHI').addEventListener('click', ()=> {
-  document.getElementById('noticeCTA').href = waUrl('मैं आवेदन करना चाहता/चाहती हूँ - SSC GD Constable Recruitment 2026');
-});
-document.getElementById('langPA').addEventListener('click', ()=> {
-  document.getElementById('noticeCTA').href = waUrl('ਮੈਂ Apply ਕਰਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ - SSC GD Constable Recruitment 2026');
-});
+/* language toggle simple (switch main texts) */
+const langBtn = document.getElementById('langBtn');
+let lang='en';
+const texts = {
+  en:{
+    heroTitle:'Fateh Digital Seva Kendra',
+    heroSub:'Ghal Kalan, Moga — Government services partner',
+    notice:'🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts',
+    applyBtn:'Apply'
+  },
+  hi:{
+    heroTitle:'फतेह डिजिटल सेवा केंद्र',
+    heroSub:'घल कलाँ, मोगा — सरकारी सेवा भागीदार',
+    notice:'🔔 एसएससी जीडी कांस्टेबल भर्ती 2026 — 25,487 पदों की सूचना जारी',
+    applyBtn:'आवेदन करें'
+  }
+};
+function setLang(l){
+  lang=l;
+  document.getElementById('heroTitle').textContent = texts[l].heroTitle;
+  document.getElementById('heroSub').textContent = texts[l].heroSub;
+  document.getElementById('latestNotice').querySelector('.title').textContent = texts[l].notice;
+  document.getElementById('noticeCTA').textContent = texts[l].applyBtn;
+}
+langBtn.addEventListener('click', ()=> setLang(lang==='en'?'hi':'en'));
+document.getElementById('langJump').addEventListener('click', (e)=>{ e.preventDefault(); setLang(lang==='en'?'hi':'en'); });
 
 </script>
 </body>
