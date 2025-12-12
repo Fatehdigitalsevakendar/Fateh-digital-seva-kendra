@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Services - Fateh Digital Seva Kendra</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-enter" id="body">
+
+  <header class="header">
+    <div class="header-brand">
+      <div class="logo"><img src="css/images/csc-logo.png" alt="CSC Logo"></div>
+      <div><div class="site-title">Fateh Digital Seva Kendra</div><div class="header-sub">Services</div></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin-bottom:14px" class="grid-nav">
+      <a class="nav-circle" href="index.html">🏠 Home</a>
+      <a class="nav-circle" href="services.html">🧾 Services</a>
+      <a class="nav-circle" href="contact.html">📞 Contact</a>
+      <a class="nav-circle" href="about.html">ℹ️ About</a>
+      <a class="nav-circle" href="#" id="langJump2">🌐 Language</a>
+    </div>
+
+    <section class="hero">
+      <h1>Our Services & Prices</h1>
+      <p class="small">Tap a service for details and to request via WhatsApp.</p>
+    </section>
+
+    <section style="margin-top:14px">
+      <div class="services-grid" id="serviceGrid">
+        <!-- Each service card -->
+        <div class="service-card" data-key="pan">
+          <div class="service-title">PAN Card</div>
+          <div class="service-desc">Apply & corrections</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+        <div class="service-card" data-key="aadhaar">
+          <div class="service-title">Aadhaar Print</div>
+          <div class="service-desc">Printing & updates</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+        <div class="service-card" data-key="ayushman">
+          <div class="service-title">Ayushman Card</div>
+          <div class="service-desc">Registration help</div>
+          <div class="service-price"><span class="price-badge">₹100</span></div>
+        </div>
+        <div class="service-card" data-key="epfo">
+          <div class="service-title">EPFO Withdrawal</div>
+          <div class="service-desc">Claims & withdrawal</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+        <div class="service-card" data-key="caste">
+          <div class="service-title">Caste Certificate</div>
+          <div class="service-desc">Apply & track</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+        <div class="service-card" data-key="residence">
+          <div class="service-title">Residence Certificate</div>
+          <div class="service-desc">Verification help</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+        <div class="service-card" data-key="income">
+          <div class="service-title">Income Certificate</div>
+          <div class="service-desc">Apply & support</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+        <div class="service-card" data-key="photocopy">
+          <div class="service-title">Photocopy B/W</div>
+          <div class="service-desc">High quality copies</div>
+          <div class="service-price"><span class="price-badge">₹4 / sheet</span></div>
+        </div>
+        <div class="service-card" data-key="colour">
+          <div class="service-title">Colour Photocopy</div>
+          <div class="service-desc">Bright colour prints</div>
+          <div class="service-price"><span class="price-badge">₹10 / page</span></div>
+        </div>
+        <div class="service-card" data-key="resume">
+          <div class="service-title">Resume / CV Making</div>
+          <div class="service-desc">Professional resume</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">Click a service card to message on WhatsApp and order.</div>
+  </main>
+
+<div id="modal" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;align-items:center;justify-content:center;background:rgba(2,6,23,0.5);z-index:200">
+  <div style="background:#fff;padding:18px;border-radius:12px;max-width:520px;margin:20px auto">
+    <div id="modalContent"></div>
+    <div style="text-align:right;margin-top:12px"><button id="closeModal" style="padding:8px 10px;border-radius:8px">Close</button></div>
+  </div>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', ()=> document.getElementById('body').classList.add('page-ready'));
+
+const phone='919780010087';
+const serviceDetails = {
+  pan:{title:'PAN Card',desc:'Apply & corrections',price:'₹250'},
+  aadhaar:{title:'Aadhaar Print',desc:'Printing & updates',price:'₹50'},
+  ayushman:{title:'Ayushman Card',desc:'Registration help',price:'₹100'},
+  epfo:{title:'EPFO Withdrawal',desc:'Claims & withdrawal',price:'₹300'},
+  caste:{title:'Caste Certificate',desc:'Apply & track',price:'₹300'},
+  residence:{title:'Residence Certificate',desc:'Verification help',price:'₹250'},
+  income:{title:'Income Certificate',desc:'Apply & support',price:'₹250'},
+  photocopy:{title:'Photocopy B/W',desc:'High quality copies',price:'₹4 / sheet'},
+  colour:{title:'Colour Photocopy',desc:'Bright colour prints',price:'₹10 / page'},
+  resume:{title:'Resume / CV Making',desc:'Professional resume',price:'₹50'}
+};
+
+document.getElementById('serviceGrid').addEventListener('click', e=>{
+  const card = e.target.closest('.service-card'); if(!card) return;
+  const key = card.dataset.key; const d = serviceDetails[key];
+  const msg = encodeURIComponent(`I want to apply for ${d.title} - ${d.price}`);
+  const url = `https://wa.me/${phone}?text=${msg}`;
+  document.getElementById('modalContent').innerHTML = `<h3>${d.title}</h3><p>${d.desc}</p><p style="font-weight:800;color:var(--deep-2)">${d.price}</p><p style="margin-top:10px"><a href="${url}" style="background:var(--accent);color:#fff;padding:10px 12px;border-radius:10px;text-decoration:none">Message on WhatsApp</a></p>`;
+  document.getElementById('modal').style.display='flex';
+});
+document.getElementById('closeModal').addEventListener('click', ()=>document.getElementById('modal').style.display='none');
+
+/* Language jump hook */
+document.getElementById('langJump2').addEventListener('click', (e)=>{ e.preventDefault(); document.getElementById('langJump').click(); });
+</script>
+
+</body>
+</html>
