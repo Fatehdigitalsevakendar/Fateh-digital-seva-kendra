@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Services — Fateh Digital Seva Kendra</title>
+
+<!-- Embedded styles (you can move to css/styles.css if you prefer) -->
+<style>
+  :root{
+    --primary:#0b72d6;
+    --accent:#0a64c0;
+    --card:#ffffff;
+    --bg:#f3f7fb;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter, system-ui, Arial; margin:0; background:var(--bg); color:#0b2540; -webkit-font-smoothing:antialiased}
+  header.header{display:flex;gap:12px;align-items:center;padding:16px;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
+  .logo-wrap{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(10,20,40,.06)}
+  .logo-wrap img{max-width:44px;max-height:44px}
+  .brand{flex:1}
+  .brand h1{margin:0;font-size:18px;color:var(--primary)}
+  .brand p{margin:2px 0 0;font-size:13px;color:#667786}
+  .nav{display:flex;flex-direction:column;padding:18px;gap:14px}
+  .nav .btn{background:linear-gradient(180deg,var(--primary),var(--accent));color:#fff;padding:18px;border-radius:18px;text-align:center;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(11,114,214,.18)}
+  .container{max-width:900px;margin:18px auto;padding:0 16px}
+  .hero-card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 10px 30px rgba(12,30,60,.06);margin-bottom:18px}
+  .hero-card h2{margin:0 0 8px;font-size:22px;color:#0b2540}
+  .hero-cta{display:flex;gap:12px;margin-top:12px}
+  .hero-cta a{background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+  /* services grid */
+  .services-section{margin-top:8px}
+  .services-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+  @media(min-width:700px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+  .service-card{background:#fff;border-radius:14px;padding:14px;border:1px solid rgba(11,30,60,.04);cursor:pointer;display:flex;align-items:center;gap:12px;transition:transform .18s,box-shadow .18s}
+  .service-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(11,30,60,.06)}
+  .service-left{width:8px;height:48px;border-radius:8px;background:linear-gradient(180deg,var(--primary),var(--accent))}
+  .service-body{flex:1}
+  .service-title{font-weight:700;margin-bottom:6px;font-size:16px}
+  .service-desc{font-size:13px;color:#6e8194;margin-bottom:6px}
+  .service-price{font-weight:800;color:#0b2540}
+  .price-badge{background:#f3f8ff;padding:6px 10px;border-radius:10px;border:1px solid rgba(11,114,214,.06)}
+  .footer-note{margin-top:14px;color:#445;}
+  /* modal */
+  #modal{display:none;position:fixed;inset:0;background:rgba(2,8,23,.45);align-items:center;justify-content:center;padding:20px;z-index:120}
+  #modal .panel{background:#fff;border-radius:12px;max-width:520px;width:100%;padding:18px}
+  .modal-title{font-size:18px;margin:0 0 8px}
+  .modal-desc{color:#556; margin: 0 0 14px}
+  .modal-actions{display:flex;gap:8px}
+  .btn-outline{background:#fff;border:1px solid #ddd;padding:8px 12px;border-radius:8px}
+  .btn-wp{background:linear-gradient(90deg,#11c36b,#0aa36a);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+  .close-x{background:#eee;border-radius:8px;padding:6px;cursor:pointer}
+  /* sticky whatsapp bubble */
+  .wh-bubble{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,#11c36b,#0aa36a);width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 18px 34px rgba(10,160,120,.18);z-index:100}
+  .lang-buttons{display:flex;gap:8px}
+  .lang-buttons button{border:1px solid #ddd;padding:6px 8px;border-radius:6px;background:#fff}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrap"><img src="css/images/csc-logo.png" alt="CSC Logo" id="siteLogo"></div>
+  <div class="brand">
+    <h1>Fateh Digital Seva Kendra</h1>
+    <p>Ghal Kalan, Moga — Government services partner</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end">
+    <div class="lang-buttons" role="navigation" aria-label="language">
+      <button id="langEN">EN</button>
+      <button id="langHI">HI</button>
+      <button id="langPA">ਪਾ</button>
+    </div>
+    <div style="font-size:12px;color:#667786;margin-top:6px">Official</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <nav class="nav" aria-label="main-navigation">
+    <a class="btn" href="index.html">🏠 Home</a>
+    <a class="btn" href="services.html">📝 Services</a>
+    <a class="btn" href="contact.html">📞 Contact</a>
+    <a class="btn" href="about.html">ℹ️ About</a>
+    <a class="btn" id="langToggle" href="#">🌐 Language</a>
+  </nav>
+
+  <section class="hero-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>
+        <h2>Fateh Digital Seva Kendra</h2>
+        <p style="margin:0;color:#6e8194">Services & document assistance — trusted, fast, affordable</p>
+      </div>
+      <div style="text-align:right">
+        <a href="services.html" class="hero-cta">See Services</a>
+        <a href="contact.html" class="hero-cta" style="background:#fff;color:var(--primary);border:1px solid #e6eefb">Contact Us</a>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px;border-radius:12px;background:#f8fbff;border-left:4px solid var(--primary)">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="font-weight:700">🔔 SSC GD Constable Recruitment 2026 — Notification out for 25,487 Posts</div>
+        <a id="applyNow" href="#" style="color:var(--primary);font-weight:700;text-decoration:underline">Apply</a>
+      </div>
+      <div style="margin-top:8px;color:#556;font-size:13px">Click Apply to message on WhatsApp with the text: <em>I want to apply</em></div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section">
+    <h3 style="margin:20px 0 8px">Featured Services</h3>
+
+    <div class="services-grid" id="serviceGrid">
+      <!-- - - - service cards will be inserted here by HTML below - - - -->
+      <div class="service-card" data-key="pan">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">PAN Card</div>
+          <div class="service-desc">Apply & corrections</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="aadhaar">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Aadhaar Print + Lamination</div>
+          <div class="service-desc">Printing & updates</div>
+          <div class="service-price"><span class="price-badge">₹80</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="ayushman">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Ayushman Card</div>
+          <div class="service-desc">Registration help</div>
+          <div class="service-price"><span class="price-badge">₹100</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="epfo">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">EPFO Fund</div>
+          <div class="service-desc">Claims & withdrawal</div>
+          <div class="service-price"><span class="price-badge">₹150</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="caste">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Caste Certificate</div>
+          <div class="service-desc">Apply & track</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="residence">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Residence Certificate</div>
+          <div class="service-desc">Verification help</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="income">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Income Certificate</div>
+          <div class="service-desc">Apply & support</div>
+          <div class="service-price"><span class="price-badge">₹250</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="photocopy">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Photocopy B/W</div>
+          <div class="service-desc">High quality copies</div>
+          <div class="service-price"><span class="price-badge">₹4 / sheet</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="colour">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Colour Photocopy</div>
+          <div class="service-desc">Bright colour prints</div>
+          <div class="service-price"><span class="price-badge">₹10 / page</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="resume">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Resume / CV Making</div>
+          <div class="service-desc">Professional resume</div>
+          <div class="service-price"><span class="price-badge">₹50</span></div>
+        </div>
+      </div>
+
+      <!-- additional items -->
+      <div class="service-card" data-key="ruler">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Rular Certificate</div>
+          <div class="service-desc">Apply & support</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="oldage">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Old age pension / Widow file</div>
+          <div class="service-desc">Apply & claims</div>
+          <div class="service-price"><span class="price-badge">₹400</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="itr">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Income Tax Return (ITR)</div>
+          <div class="service-desc">ITR Form fill / e-file</div>
+          <div class="service-price"><span class="price-badge">₹600</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="death">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Death / Birth Certificate</div>
+          <div class="service-desc">Apply certificate</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="death_late">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Death/Birth Certificate (late entry)</div>
+          <div class="service-desc">Late entry process</div>
+          <div class="service-price"><span class="price-badge">₹500</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="udhyam">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Udhyam Certificate</div>
+          <div class="service-desc">Apply & register</div>
+          <div class="service-price"><span class="price-badge">₹200</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="five_lakh">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">5 Lakh Bima Card</div>
+          <div class="service-desc">Health insurance apply</div>
+          <div class="service-price"><span class="price-badge">₹100</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="pmkisan_kyc">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">PM Kisan - KYC</div>
+          <div class="service-desc">KYC update</div>
+          <div class="service-price"><span class="price-badge">₹100</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="pmkisan_new">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">PM Kisan - New File</div>
+          <div class="service-desc">Apply & claims</div>
+          <div class="service-price"><span class="price-badge">₹300</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="voter">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Voter Card</div>
+          <div class="service-desc">Election commission of India</div>
+          <div class="service-price"><span class="price-badge">₹200</span></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-key="esharm">
+        <div class="service-left"></div>
+        <div class="service-body">
+          <div class="service-title">Eshram Card</div>
+          <div class="service-desc">Apply</div>
+          <div class="service-price"><span class="price-badge">₹150</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-note">Click a service card to message on WhatsApp and order.</div>
+  </section>
+
+</main>
+
+<!-- modal -->
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="panel" role="document">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+        <div style="font-weight:800" id="modalPrice"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+        <button id="closeModal" class="close-x">✕</button>
+        <div style="height:6px"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px" class="modal-actions">
+      <a id="btnWhatsApp" class="btn-wp" href="#" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <button id="btnCopy" class="btn-outline">Copy text</button>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp bubble -->
+<a id="quickWhats" class="wh-bubble" href="#" aria-label="Send WhatsApp message">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M20.5 3.5L3.5 20.5" stroke="#fff" stroke-width="2"/></svg>
+</a>
+
+<!-- Embedded script -->
+<script>
+  // ====== CONFIG ======
+  const phone = "9780010087"; // your phone without +91, change if needed
+
+  const serviceDetails = {
+    pan:{title:'PAN Card',desc:'Apply & corrections',price:'₹250'},
+    aadhaar:{title:'Aadhaar Print + Lamination',desc:'Printing & updates',price:'₹80'},
+    ayushman:{title:'Ayushman Card',desc:'Registration help',price:'₹100'},
+    epfo:{title:'EPFO Fund',desc:'Claims & withdrawal',price:'₹150'},
+    caste:{title:'Caste Certificate',desc:'Apply & track',price:'₹300'},
+    residence:{title:'Residence Certificate',desc:'Verification help',price:'₹250'},
+    income:{title:'Income Certificate',desc:'Apply & support',price:'₹250'},
+    photocopy:{title:'Photocopy B/W',desc:'High quality copies',price:'₹4 / sheet'},
+    colour:{title:'Colour Photocopy',desc:'Bright colour prints',price:'₹10 / page'},
+    resume:{title:'Resume / CV Making',desc:'Professional resume',price:'₹50'},
+    ruler:{title:'Rular Certificate',desc:'Government of Punjab support',price:'₹300'},
+    oldage:{title:'Old age pension / Widow file',desc:'Apply & claims',price:'₹400'},
+    itr:{title:'Income Tax Return (ITR)',desc:'ITR Form fill / e-file',price:'₹600'},
+    death:{title:'Death / Birth Certificate',desc:'Apply certificate',price:'₹300'},
+    death_late:{title:'Death/Birth Certificate (late entry)',desc:'Late entry process',price:'₹500'},
+    udhyam:{title:'Udhyam Certificate',desc:'Apply & register',price:'₹200'},
+    five_lakh:{title:'5 Lakh Bima Card',desc:'Health insurance apply',price:'₹100'},
+    pmkisan_kyc:{title:'PM Kisan - KYC',desc:'KYC update',price:'₹100'},
+    pmkisan_new:{title:'PM Kisan - New File',desc:'Apply & claims',price:'₹300'},
+    voter:{title:'Voter Card',desc:'Election commission of India',price:'₹200'},
+    esharm:{title:'Esharm Card',desc:'Apply',price:'₹150'}
+  };
+
+  // ====== UI + Modal ======
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalPrice = document.getElementById('modalPrice');
+  const btnWhatsApp = document.getElementById('btnWhatsApp');
+  const btnCopy = document.getElementById('btnCopy');
+  const closeModal = document.getElementById('closeModal');
+  const quickWhats = document.getElementById('quickWhats');
+  const applyNow = document.getElementById('applyNow');
+
+  // Open the modal when a card clicked
+  document.getElementById('serviceGrid').addEventListener('click', (e)=>{
+    const card = e.target.closest('.service-card');
+    if(!card) return;
+    const key = card.dataset.key;
+    const s = serviceDetails[key];
+    if(!s) return;
+    modalTitle.textContent = s.title;
+    modalDesc.textContent = s.desc;
+    modalPrice.textContent = s.price;
+    // prepare WhatsApp link
+    const msg = encodeURIComponent(`Hello, I want to apply for "${s.title}" — ${s.price}. Please help.`);
+    btnWhatsApp.href = `https://wa.me/91${phone}?text=${msg}`;
+    quickWhats.href = btnWhatsApp.href;
+    // show modal
+    modal.style.display = 'flex';
+  });
+
+  closeModal.addEventListener('click', ()=> modal.style.display = 'none');
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) modal.style.display = 'none'; });
+
+  // copy text
+  btnCopy.addEventListener('click', ()=> {
+    const text = `${modalTitle.textContent} — ${modalPrice.textContent}\n${modalDesc.textContent}\nContact: +91${phone}`;
+    navigator.clipboard?.writeText(text).then(()=> alert('Text copied.'));
+  });
+
+  // Quick apply button for the SSC notification (pre-filled message)
+  applyNow.addEventListener('click', function(e){
+    e.preventDefault();
+    const msg = encodeURIComponent("Hello, I want to apply for SSC GD Constable Recruitment 2026 — I want to apply");
+    window.open(`https://wa.me/91${phone}?text=${msg}`,'_blank');
+  });
+
+  // Quick Whats bubble - prefill generic message
+  quickWhats.addEventListener('click', (e)=>{
+    // default bubble message
+  });
+
+  // Language buttons (simple placeholders — you can add real translations)
+  document.getElementById('langEN').addEventListener('click', ()=> alert('Language: English (default)'));
+  document.getElementById('langHI').addEventListener('click', ()=> alert('Language: Hindi (not implemented)'));
+  document.getElementById('langPA').addEventListener('click', ()=> alert('Language: Punjabi (not implemented)'));
+
+  // page ready small animation class
+  document.addEventListener('DOMContentLoaded', ()=> document.body.classList.add('page-ready'));
+</script>
+
+</body>
+</html>
