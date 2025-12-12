@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services - Fateh Digital Seva Kendra</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Small inline tweaks so Services page top spacing + look match Home exactly -->
+  <style>
+    /* Ensure nav spacing matches Home page */
+    .nav-grid {
+      margin-top: 40px !important; /* adjust 40px -> 60px if you want more space */
+    }
+
+    /* Keep hero-card same look as home (if your external file already has .hero-card,
+       this will not break it — it just ensures same box style when present) */
+    .hero-card {
+      border-radius: 12px;
+      padding: 20px;
+      background: linear-gradient(180deg, #fff, #fbfeff);
+      box-shadow: 0 10px 20px rgba(10,30,60,0.06);
+      margin-bottom: 16px;
+    }
+
+    /* Keep site logo sizing consistent */
+    .site-logo { width: 80px; height: auto; object-fit: contain; border-radius:12px; background:white; padding:6px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body class="page-enter" id="body">
+
+<header class="header">
+  <div class="header-brand" style="display:flex;align-items:center;gap:12px;">
+    <div class="header-logo">
+      <!-- logo in repo root, filename: fateh-logo.png -->
+      <img src="fateh-logo.png" alt="Fateh Digital Seva Kendra Logo" class="site-logo">
+    </div>
+
+    <div>
+      <div class="site-title">Fateh Digital Seva Kendra</div>
+      <div class="header-sub">Official Services · Ghal Kalan, Moga</div>
+    </div>
+
+    <!-- language / small buttons aligned to right -->
+    <div style="margin-left:auto;display:flex;gap:6px;align-items:center">
+      <a href="index.html" style="text-decoration:none;color:#0b72d6;font-weight:700">EN</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- main nav buttons (big blue rounded buttons) -->
+  <div style="margin-bottom:14px" class="grid-nav nav-grid" aria-label="Main navigation">
+    <a class="nav-circle" href="index.html">🏠 Home</a>
+    <a class="nav-circle" href="services.html">📄 Services</a>
+    <a class="nav-circle" href="contact.html">📞 Contact</a>
+    <a class="nav-circle" href="about.html">ℹ️ About</a>
+    <a class="nav-circle" href="#" id="langBtn">🌐 Language</a>
+  </div>
+
+  <!-- HERO CARD: SAME AS HOME (title + small text) -->
+  <section class="hero-card" role="region" aria-label="Hero">
+    <h2 style="margin:0;font-size:26px;color:var(--deep-1)">Our Services & Prices</h2>
+    <p style="color:var(--muted);margin-top:10px">Tap any service to message on WhatsApp instantly.</p>
+
+    <div style="margin-top:12px;display:flex;gap:12px;">
+      <a class="hero-cta" href="services.html">See Services</a>
+      <a class="hero-cta" href="contact.html" style="background:#fff;color:#0b72d6;border:1px solid #dbeafe">Contact Us</a>
+    </div>
+  </section>
+
+  <h2 style="margin-top:6px">Available Services</h2>
+  <p class="small">Tap a service to open WhatsApp pre-filled message</p>
+
+  <!-- SERVICES GRID -->
+  <div id="serviceGrid" class="services-grid" style="margin-top:12px;display:grid;gap:14px">
+    <!-- Example service card -->
+    <div class="service-card" data-key="pan">
+      <div class="service-title">PAN Card</div>
+      <div class="service-desc">Apply / Correction</div>
+      <div class="service-price"><span class="price-badge">₹250</span></div>
+    </div>
+
+    <div class="service-card" data-key="aadhaar">
+      <div class="service-title">Aadhaar Print + Lamination</div>
+      <div class="service-desc">Printing & updates</div>
+      <div class="service-price"><span class="price-badge">₹80</span></div>
+    </div>
+
+    <div class="service-card" data-key="epfo">
+      <div class="service-title">EPFO Fund</div>
+      <div class="service-desc">Claims & withdrawal</div>
+      <div class="service-price"><span class="price-badge">₹150</span></div>
+    </div>
+
+    <!-- Add all your other service-cards below — keep same structure -->
+    <div class="service-card" data-key="itr">
+      <div class="service-title">Income Tax Return (ITR)</div>
+      <div class="service-desc">Return filing</div>
+      <div class="service-price"><span class="price-badge">₹600</span></div>
+    </div>
+
+    <div class="service-card" data-key="caste">
+      <div class="service-title">Caste Certificate</div>
+      <div class="service-desc">Apply & track</div>
+      <div class="service-price"><span class="price-badge">₹300</span></div>
+    </div>
+
+    <div class="service-card" data-key="residence">
+      <div class="service-title">Residence Certificate</div>
+      <div class="service-desc">Verification help</div>
+      <div class="service-price"><span class="price-badge">₹250</span></div>
+    </div>
+
+    <div class="service-card" data-key="income">
+      <div class="service-title">Income Certificate</div>
+      <div class="service-desc">Apply & support</div>
+      <div class="service-price"><span class="price-badge">₹250</span></div>
+    </div>
+
+    <div class="service-card" data-key="photocopy">
+      <div class="service-title">Photocopy B/W</div>
+      <div class="service-desc">High quality copies</div>
+      <div class="service-price"><span class="price-badge">₹4 / sheet</span></div>
+    </div>
+
+    <div class="service-card" data-key="colour">
+      <div class="service-title">Colour Photocopy</div>
+      <div class="service-desc">Bright colour prints</div>
+      <div class="service-price"><span class="price-badge">₹10 / page</span></div>
+    </div>
+
+    <div class="service-card" data-key="resume">
+      <div class="service-title">Resume / CV Making</div>
+      <div class="service-desc">Professional resume</div>
+      <div class="service-price"><span class="price-badge">₹50</span></div>
+    </div>
+
+    <!-- add other cards exactly the same way -->
+  </div>
+
+  <!-- floating WhatsApp quick button (if your CSS expects .floating-whatsapp) -->
+  <div class="floating-whatsapp" style="position:fixed;right:18px;bottom:18px">
+    <a href="https://wa.me/919780010087" target="_blank" style="display:block;background:#25D366;padding:12px 16px;border-radius:999px;color:white;text-decoration:none;">💬 WhatsApp</a>
+  </div>
+
+</main>
+
+<!-- JS: simple click-handler to open whatsapp with prefilled message -->
+<script>
+  const phone = '919780010087';
+
+  // Click handler on services grid
+  document.getElementById('serviceGrid').addEventListener('click', (e)=>{
+    const card = e.target.closest('.service-card');
+    if(!card) return;
+
+    const title = card.querySelector('.service-title')?.textContent?.trim() || 'Service';
+    const price = card.querySelector('.price-badge')?.textContent?.trim() || '';
+    const msg = encodeURIComponent(`I want to apply for ${title} ${price}`);
+    const url = `https://wa.me/${phone}?text=${msg}`;
+    window.location.href = url;
+  });
+
+  // optional: language button behavior (if you use it)
+  document.getElementById('langBtn')?.addEventListener('click', (e)=>{
+    e.preventDefault();
+    alert('Language switcher — add your logic here.');
+  });
+</script>
+
+</body>
+</html>
