@@ -14,6 +14,22 @@
       opacity: 1 !important;
       transform: none !important;
     }
+
+    /* ===== POPUP ANIMATION ===== */
+    #applyPopup {
+      animation: fadeIn .25s ease forwards;
+    }
+    #applyPopup .popup-box {
+      animation: slideUp .25s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px) scale(.96); }
+      to { transform: translateY(0) scale(1); }
+    }
   </style>
 </head>
 
@@ -46,156 +62,185 @@
   <!-- HERO -->
   <section class="hero" style="margin-top:18px">
     <h1>Our Services & Prices</h1>
-    <p class="small">Tap any service to message on WhatsApp instantly.</p>
+    <p class="small">Tap any service to apply.</p>
   </section>
-
-  <h2>Available Services</h2>
-  <p class="small">Tap a service to open WhatsApp</p>
 
   <!-- ================= SERVICES GRID ================= -->
   <div id="serviceGrid" class="services-grid">
 
-    <!-- 1 -->
-    <div class="service-card" data-service="PAN Card">
+    <div class="service-card" data-service="PAN Card" data-price="₹250">
       <div class="service-title">PAN Card</div>
       <div class="service-desc">Apply / Correction</div>
       <div class="service-price"><span class="price-badge">₹250</span></div>
     </div>
 
-    <!-- 2 -->
-    <div class="service-card" data-service="Aadhaar Print + Lamination">
+    <div class="service-card" data-service="Aadhaar Print + Lamination" data-price="₹80">
       <div class="service-title">Aadhaar Print + Lamination</div>
       <div class="service-desc">Printing & updates</div>
       <div class="service-price"><span class="price-badge">₹80</span></div>
     </div>
 
-    <!-- 3 -->
-    <div class="service-card" data-service="EPFO Fund Withdrawal">
+    <div class="service-card" data-service="EPFO Fund Withdrawal" data-price="₹150">
       <div class="service-title">EPFO Fund</div>
       <div class="service-desc">Withdrawal support</div>
       <div class="service-price"><span class="price-badge">₹150</span></div>
     </div>
 
-    <!-- 4 -->
-    <div class="service-card" data-service="Rural Certificate">
+    <div class="service-card" data-service="Rural Certificate" data-price="₹300">
       <div class="service-title">Rural Certificate</div>
       <div class="service-desc">Application</div>
       <div class="service-price"><span class="price-badge">₹300</span></div>
     </div>
 
-    <!-- 5 -->
-    <div class="service-card" data-service="Old Age Pension / Widow File">
+    <div class="service-card" data-service="Old Age / Widow Pension" data-price="₹400">
       <div class="service-title">Old Age / Widow Pension</div>
-      <div class="service-desc">New file</div>
+      <div class="service-desc">New File</div>
       <div class="service-price"><span class="price-badge">₹400</span></div>
     </div>
 
-    <!-- 6 -->
-    <div class="service-card" data-service="Income Tax Return (ITR)">
+    <div class="service-card" data-service="Income Tax Return (ITR)" data-price="₹600">
       <div class="service-title">Income Tax Return</div>
       <div class="service-desc">ITR Filing</div>
       <div class="service-price"><span class="price-badge">₹600</span></div>
     </div>
 
-    <!-- 7 -->
-    <div class="service-card" data-service="Birth / Death Certificate">
+    <div class="service-card" data-service="Birth / Death Certificate" data-price="₹300">
       <div class="service-title">Birth / Death Certificate</div>
       <div class="service-desc">Normal Entry</div>
       <div class="service-price"><span class="price-badge">₹300</span></div>
     </div>
 
-    <!-- 8 -->
-    <div class="service-card" data-service="Birth / Death Certificate Late Entry">
+    <div class="service-card" data-service="Birth / Death Certificate (Late)" data-price="₹500">
       <div class="service-title">Birth / Death Certificate</div>
       <div class="service-desc">Late Entry</div>
       <div class="service-price"><span class="price-badge">₹500</span></div>
     </div>
 
-    <!-- 9 -->
-    <div class="service-card" data-service="Udyam Certificate">
+    <div class="service-card" data-service="Udyam Certificate" data-price="₹200">
       <div class="service-title">Udyam Certificate</div>
       <div class="service-desc">MSME Registration</div>
       <div class="service-price"><span class="price-badge">₹200</span></div>
     </div>
 
-    <!-- 10 -->
-    <div class="service-card" data-service="5 Lakh Bina Card">
+    <div class="service-card" data-service="5 Lakh Bina Card" data-price="₹100">
       <div class="service-title">5 Lakh Bina Card</div>
       <div class="service-desc">Ayushman</div>
       <div class="service-price"><span class="price-badge">₹100</span></div>
     </div>
 
-    <!-- 11 -->
-    <div class="service-card" data-service="PM Kisan KYC">
+    <div class="service-card" data-service="PM Kisan KYC" data-price="₹100">
       <div class="service-title">PM Kisan KYC</div>
       <div class="service-desc">e-KYC</div>
       <div class="service-price"><span class="price-badge">₹100</span></div>
     </div>
 
-    <!-- 12 -->
-    <div class="service-card" data-service="PM Kisan New File">
+    <div class="service-card" data-service="PM Kisan New File" data-price="₹300">
       <div class="service-title">PM Kisan</div>
       <div class="service-desc">New File</div>
       <div class="service-price"><span class="price-badge">₹300</span></div>
     </div>
 
-    <!-- 13 -->
-    <div class="service-card" data-service="Voter Card">
+    <div class="service-card" data-service="Voter Card" data-price="₹200">
       <div class="service-title">Voter Card</div>
       <div class="service-desc">Apply / Correction</div>
       <div class="service-price"><span class="price-badge">₹200</span></div>
     </div>
 
-    <!-- 14 -->
-    <div class="service-card" data-service="E-Shram Card">
+    <div class="service-card" data-service="E-Shram Card" data-price="₹150">
       <div class="service-title">E-Shram Card</div>
       <div class="service-desc">Registration</div>
       <div class="service-price"><span class="price-badge">₹150</span></div>
     </div>
 
-    <!-- 15 -->
-    <div class="service-card" data-service="Photocopy (B/W)">
-      <div class="service-title">Photocopy (B/W)</div>
-      <div class="service-desc">Per sheet</div>
-      <div class="service-price"><span class="price-badge">₹4</span></div>
-    </div>
-
-    <!-- 16 -->
-    <div class="service-card" data-service="Colour Photocopy">
-      <div class="service-title">Colour Photocopy</div>
-      <div class="service-desc">Per page</div>
-      <div class="service-price"><span class="price-badge">₹10</span></div>
-    </div>
-
-    <!-- 17 -->
-    <div class="service-card" data-service="Resume / CV Making">
-      <div class="service-title">Resume / CV Making</div>
-      <div class="service-desc">Professional Resume</div>
-      <div class="service-price"><span class="price-badge">₹50</span></div>
-    </div>
-
   </div>
 </main>
 
-<!-- ================= WHATSAPP SCRIPT ================= -->
+<!-- ================= APPLY POPUP ================= -->
+<div id="applyPopup" style="
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+">
+  <div class="popup-box" style="
+    background:#fff;
+    max-width:320px;
+    width:90%;
+    border-radius:16px;
+    padding:18px;
+    text-align:center;
+  ">
+    <h3 style="color:#0b72d6;margin-bottom:8px">Apply for Service</h3>
+    <p id="popupText" style="font-size:15px;margin-bottom:16px"></p>
+
+    <div style="display:flex;gap:10px">
+      <button id="cancelApply" style="
+        flex:1;
+        padding:10px;
+        border-radius:10px;
+        border:1px solid #ddd;
+        background:#f3f4f6;
+        font-weight:600;
+      ">Cancel</button>
+
+      <button id="confirmApply" style="
+        flex:1;
+        padding:10px;
+        border-radius:10px;
+        border:none;
+        background:#25D366;
+        color:#fff;
+        font-weight:700;
+      ">Apply</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
 <script>
   const phone = "919780010087";
+  let selectedService = "";
+  let selectedPrice = "";
+
+  const popup = document.getElementById("applyPopup");
+  const popupText = document.getElementById("popupText");
 
   document.getElementById("serviceGrid").addEventListener("click", function (e) {
     const card = e.target.closest(".service-card");
     if (!card) return;
 
-    const service = card.dataset.service;
+    selectedService = card.dataset.service;
+    selectedPrice = card.dataset.price;
 
-    const message =
+    popupText.innerHTML =
+      `Service: <b>${selectedService}</b><br>` +
+      `Price: <b>${selectedPrice}</b><br><br>` +
+      `Click Apply to continue on WhatsApp.`;
+
+    popup.style.display = "flex";
+  });
+
+  document.getElementById("cancelApply").onclick = () => {
+    popup.style.display = "none";
+  };
+
+  document.getElementById("confirmApply").onclick = () => {
+    const msg =
       `Hello Fateh Digital Seva Kendra 👋\n\n` +
-      `I want this service:\n` +
-      `👉 ${service}\n\n` +
+      `I want to apply for:\n` +
+      `👉 ${selectedService}\n` +
+      `💰 ${selectedPrice}\n\n` +
       `Please guide me with required documents.`;
 
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  });
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
+      "_blank"
+    );
+    popup.style.display = "none";
+  };
 </script>
 
 </body>
