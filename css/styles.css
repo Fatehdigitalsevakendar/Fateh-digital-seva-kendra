@@ -54,7 +54,7 @@ body{
 .nav-icon{font-size:18px;opacity:0.98}
 
 /* notice / latest bharti (fixed top of content) */
-.notice-wrap{position:sticky;top:76px;z-index:70;margin-bottom:14px}
+.notice-wrap{position:static;z-index:auto;}
 .notice{
   display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:linear-gradient(90deg,#fff, #f1fbff);
   border-left:6px solid var(--accent);box-shadow:var(--soft-shadow);
@@ -121,3 +121,171 @@ body{
   }
   
 }
+.apply-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(180deg, #1e88e5, #0b5ed7);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.job-page h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 28px 0 12px;
+}
+
+.job-page h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 18px 0 14px;
+}
+
+.job-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 12px 0 30px;
+}
+
+.big-space {
+  height: 20px;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.job-table td {
+  border: 2px solid #333;
+  padding: 14px;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.job-table td:first-child {
+  font-weight: 700;
+  width: 45%;
+}
+
+.green-text {
+  color: #0a9d5a;
+  font-weight: 700;
+}
+/* ===== HEADER FIX ===== */
+.site-header {
+  background: #f7fafc;
+  padding: 16px;
+}
+
+.header-wrap {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-logo {
+  width: 66px;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.business-sub {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* mobile fix */
+@media (max-width: 600px) {
+  .header-wrap {
+    align-items: flex-start;
+  }
+
+  .business-name {
+    font-size: 22px;
+  }
+}
+/* ===== Latest Updates Like Govt Job Site ===== */
+
+.latest-updates {
+  padding: 15px;
+  margin: 10px;
+  background: #fff;
+}
+
+.latest-updates h2 {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.update-card {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.update-card:last-child {
+  border-bottom: none;
+}
+
+.update-card a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.update-title {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.update-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tag.punjab {
+  background: #000;
+}
+
+.tag.all-india {
+  background: #444;
+}
+
+.date {
+  font-size: 12px;
+  color: #666;
+             }
