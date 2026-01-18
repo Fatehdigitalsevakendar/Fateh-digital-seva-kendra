@@ -350,29 +350,24 @@ body{
 }
 
 /* Telecom Logos Row */
-.telecom-logos {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin: 15px 0 25px 0;
-}
-
 .telecom-logos img {
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  object-fit: contain;
-  background: #fff;
+  background: #ffffff;
   border: 2px solid #e0e0e0;
-  padding: 6px;
+
+  /* IMPORTANT FIX */
+  object-fit: contain;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transition: transform 0.25s ease;
 }
 
 .telecom-logos img:hover {
   transform: scale(1.1);
-}
-
-/* Push nav buttons down slightly */
-.grid-nav {
-  margin-top: 10px;
 }
