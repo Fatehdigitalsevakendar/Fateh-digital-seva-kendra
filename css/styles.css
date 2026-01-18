@@ -289,3 +289,34 @@ body{
   font-size: 12px;
   color: #666;
   }
+  .header {
+  background: #ffffff;
+  padding: 15px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 12px;             /* space between logo & text */
+}
+
+.site-logo {
+  width: 60px;           /* adjust if needed */
+  height: auto;
+}
+
+.site-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a3d91;
+}
+
+.header-sub {
+  font-size: 14px;
+  color: #666;
+}
